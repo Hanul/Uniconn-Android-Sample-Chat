@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
         Log.i(TAG, "접속을 시도합니다.");
 
-        connector = new Connector("192.168.0.6", false, 8101, 8102, new ConnectedHandler() {
+        connector = new Connector("samplechat.uppercase.io", false, 8101, 8102, new ConnectedHandler() {
 
             @Override
             public void handle() {
