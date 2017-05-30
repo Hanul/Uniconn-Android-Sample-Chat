@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Uniconn-Android-Sample-Chat.iml" filepath="$PROJECT_DIR$/Uniconn-Android-Sample-Chat.iml" />
       <module fileurl="file://$PROJECT_DIR$/Unicorn/Unicorn.iml" filepath="$PROJECT_DIR$/Unicorn/Unicorn.iml" />
       <module fileurl="file://$PROJECT_DIR$/Unicorn-Android-Sample-Chat.iml" filepath="$PROJECT_DIR$/Unicorn-Android-Sample-Chat.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
