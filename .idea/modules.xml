@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Uniconn-Android-Sample-Chat.iml" filepath="$PROJECT_DIR$/Uniconn-Android-Sample-Chat.iml" />
       <module fileurl="file://$PROJECT_DIR$/Unicorn/Unicorn.iml" filepath="$PROJECT_DIR$/Unicorn/Unicorn.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Unicorn-Android-Sample-Chat.iml" filepath="$PROJECT_DIR$/Unicorn-Android-Sample-Chat.iml" />
+      <module fileurl="file://C:\Users\YJ\Documents\workspace\Uniconn-Android-Sample-Chat\Unicorn-Android-Sample-Chat.iml" filepath="C:\Users\YJ\Documents\workspace\Uniconn-Android-Sample-Chat\Unicorn-Android-Sample-Chat.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

@@ -23,21 +23,21 @@ public class JSONUtil {
 
             // when value is Date type
             if (value instanceof Date) {
-                originArray.put(i, new Date(((Date) value).getTime()));
+                originArray.put(new Date(((Date) value).getTime()));
             }
 
             // when value is data
             else if (value instanceof JSONObject) {
-                originArray.put(i, copyData((JSONObject) value));
+                originArray.put(copyData((JSONObject) value));
             }
 
             // when value is array
             else if (value instanceof JSONArray) {
-                originArray.put(i, copyArray((JSONArray) value));
+                originArray.put(copyArray((JSONArray) value));
             }
 
             else {
-                originArray.put(i, value);
+                originArray.put(value);
             }
         }
     }
@@ -155,7 +155,7 @@ public class JSONUtil {
             }
         }
 
-        result.put("__DATE_ATTR_NAMES", dateAttrNames);
+        result.put("__D", dateAttrNames);
 
         return result;
     }
@@ -175,14 +175,14 @@ public class JSONUtil {
         result = copyData(json);
 
         // when date attribute names exists
-        if (!result.isNull("__DATE_ATTR_NAMES")) {
+        if (!result.isNull("__D")) {
 
             // change timestamp integer to Date type.
-            for (int i = 0; i < ((JSONArray) result.get("__DATE_ATTR_NAMES")).length(); i += 1) {
-                String dateAttrName = (String) ((JSONArray) result.get("__DATE_ATTR_NAMES")).get(i);
+            for (int i = 0; i < ((JSONArray) result.get("__D")).length(); i += 1) {
+                String dateAttrName = (String) ((JSONArray) result.get("__D")).get(i);
                 result.put(dateAttrName, new Date((Long) result.get(dateAttrName)));
             }
-            result.remove("__DATE_ATTR_NAMES");
+            result.remove("__D");
         }
 
         Iterator<String> iterator = result.keys();
