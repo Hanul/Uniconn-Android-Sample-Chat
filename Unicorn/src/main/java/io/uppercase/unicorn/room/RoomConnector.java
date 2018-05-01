@@ -126,7 +126,7 @@ public class RoomConnector {
      */
     public void enterRoom(String roomName) {
         enterRoomNames.add(roomName);
-        if (isConnected() != true) {
+        if (isConnected() == true) {
             send("__ENTER_ROOM", roomName);
         }
     }
@@ -135,7 +135,7 @@ public class RoomConnector {
      * @param roomName
      */
     public void exitRoom(String roomName) {
-        if (isConnected() != true) {
+        if (isConnected() == true) {
             send("__EXIT_ROOM", roomName);
         }
         enterRoomNames.remove(roomName);
