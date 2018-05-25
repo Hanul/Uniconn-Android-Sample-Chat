@@ -12,7 +12,7 @@ import io.uppercase.unicorn.handler.MethodHandler;
 /**
  * UPPERCASE-ROOM 모듈의 룸 서버와의 접속 및 통신 작업을 처리하는 클래스
  */
-public class RoomConnector {
+public class RoomServerConnector {
 
     private SocketServerConnector connector;
 
@@ -37,7 +37,7 @@ public class RoomConnector {
      * @param connectionFailedHandler
      * @param disconnectedHandler
      */
-    public RoomConnector(int port, final ConnectedHandler connectedHandler, ConnectionFailedHandler connectionFailedHandler, DisconnectedHandler disconnectedHandler) {
+    public RoomServerConnector(int port, final ConnectedHandler connectedHandler, ConnectionFailedHandler connectionFailedHandler, DisconnectedHandler disconnectedHandler) {
 
         connector = new SocketServerConnector(port, new ConnectedHandler() {
 
@@ -68,7 +68,7 @@ public class RoomConnector {
      * @param connectionFailedHandler
      * @param disconnectedHandler
      */
-    public RoomConnector(String host, int port, final ConnectedHandler connectedHandler, ConnectionFailedHandler connectionFailedHandler, DisconnectedHandler disconnectedHandler) {
+    public RoomServerConnector(String host, int port, final ConnectedHandler connectedHandler, ConnectionFailedHandler connectionFailedHandler, DisconnectedHandler disconnectedHandler) {
         this(port, connectedHandler, connectionFailedHandler, disconnectedHandler);
         connect(host);
     }

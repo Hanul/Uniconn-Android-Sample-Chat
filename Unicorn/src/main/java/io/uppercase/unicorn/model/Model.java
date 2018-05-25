@@ -19,11 +19,11 @@ import io.uppercase.unicorn.model.handler.OnRemoveHandler;
 import io.uppercase.unicorn.model.handler.RemoveHandler;
 import io.uppercase.unicorn.model.handler.UpdateHandler;
 import io.uppercase.unicorn.room.Room;
-import io.uppercase.unicorn.room.RoomConnector;
+import io.uppercase.unicorn.room.RoomServerConnector;
 
 public class Model {
 
-    private RoomConnector connector;
+    private RoomServerConnector connector;
     private String boxName;
     private String name;
 
@@ -34,7 +34,7 @@ public class Model {
      * @param boxName
      * @param name
      */
-    public Model(RoomConnector connector, String boxName, String name) {
+    public Model(RoomServerConnector connector, String boxName, String name) {
 
         this.connector = connector;
         this.boxName = boxName;
@@ -429,7 +429,7 @@ public class Model {
             e.printStackTrace();
         }
 
-        room.send("checkIsExists", params, new MethodHandler() {
+        room.send("checkExists", params, new MethodHandler() {
 
             @Override
             public void handle(Object data) {
@@ -443,7 +443,7 @@ public class Model {
                     } else if (result.isNull("isNotAuthed") != true && result.getBoolean("isNotAuthed") == true) {
                         handler.notAuthed();
                     } else {
-                        handler.success(result.getBoolean("isExists"));
+                        handler.success(result.getBoolean("exists"));
                     }
 
                 } catch (JSONException e) {

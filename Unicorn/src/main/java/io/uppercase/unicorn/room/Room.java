@@ -11,7 +11,7 @@ import io.uppercase.unicorn.handler.MethodHandler;
 
 public class Room {
 
-    private RoomConnector connector;
+    private RoomServerConnector connector;
 
     private String roomName;
     private Map<String, List<MethodHandler>> methodHandlerMap = new HashMap<String, List<MethodHandler>>();
@@ -22,7 +22,7 @@ public class Room {
      * @param boxName
      * @param name
      */
-    public Room(RoomConnector connector, String boxName, String name) {
+    public Room(RoomServerConnector connector, String boxName, String name) {
         this.connector = connector;
         connector.enterRoom(roomName = boxName + "/" + name);
     }

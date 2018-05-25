@@ -11,12 +11,12 @@ import java.net.URL;
 import io.uppercase.unicorn.handler.ConnectedHandler;
 import io.uppercase.unicorn.handler.ConnectionFailedHandler;
 import io.uppercase.unicorn.handler.DisconnectedHandler;
-import io.uppercase.unicorn.room.RoomConnector;
+import io.uppercase.unicorn.room.RoomServerConnector;
 
 /**
  * UPPERCASE 서버와의 접속 및 통신 작업을 처리하는 클래스
  */
-public class Connector extends RoomConnector {
+public class Connector extends RoomServerConnector {
 
     private String doorHost;
     private boolean isSecure;
